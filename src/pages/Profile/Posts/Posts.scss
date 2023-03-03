@@ -1,0 +1,38 @@
+.PostBar{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.PostList{
+    overflow: auto;
+    width: 100%;
+    height: 570px;
+}
+
+.Post{
+    width: 100%;
+    height: 80px;
+    background-color: #333333;
+    margin-bottom: 15px;
+    border: 2px solid #333333;
+    border-radius: 10px;
+h3{
+    color: white;
+    margin-left: 10px;
+}
+}
+
+@media (max-width: 450px) {
+    .PostBar{
+        width: 80%;
+        height: 10%;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

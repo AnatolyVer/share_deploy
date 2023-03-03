@@ -1,0 +1,23 @@
+footer{
+    height: 80px;
+    background-color: #7c1e00;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        & :hover{
+            border-bottom: 2px solid white;
+        }
+    }
+}
+@media (max-width: 450px) {
+    footer{
+        height: 55px;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,26 @@
+.MyFooter {
+    height: 80px;
+    background-color: #333333;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.MyFooter a{
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.MyFooter a:hover{
+    border-bottom: 2px solid white;
+}
+
+@media (max-width: 450px) {
+    .MyFooter{
+        height: 55px;
+        font-size: 20px;
+    }
+}

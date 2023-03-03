@@ -1,0 +1,20 @@
+h1{
+    margin-top: 20px;
+}
+
+.Profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 450px) {
+    .Profile{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}

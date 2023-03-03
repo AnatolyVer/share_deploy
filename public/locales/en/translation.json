@@ -1,0 +1,21 @@
+{
+  "sign_in": "Sign In",
+  "sign_up": "Sign Up",
+  "email": "Email",
+  "password": "Password",
+  "firstname": "Firstname",
+  "lastname": "Lastname",
+  "nickname": "Nickname",
+  "confirmPassword": "Confirm password",
+  "email or nickname": "Email or nickname",
+  "create_post": "Create post",
+  "profile": "Profile",
+  "leave": "Leave",
+  "confirm": "Confirm",
+  "name": "Name",
+  "age": "Age",
+  "sex": "Sex",
+  "no_posts": "The user hasn't published any posts yet",
+  "welcome": "Welcome to ShareWise!",
+  "no_user": "User doesn't exist"
+}

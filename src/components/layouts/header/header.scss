@@ -1,0 +1,84 @@
+header{
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background-color: #7c1e00;
+  z-index: 99;
+}
+
+.wrapper{
+  width: 96%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__right{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav{
+  width: 325px;
+  display: flex;
+  justify-content: right;
+  margin-right: 10px;
+  a{
+    margin-right: 10px;
+  }
+}
+
+.header__right__lang{
+  color: white;
+  background-color: #7c1e00;
+  border: 2px solid transparent;
+  outline: 1px solid transparent;
+  appearance: none;
+  width: 30px;
+  font-size: 19px;
+  &:hover{
+    border-bottom: 2px solid white;
+  }
+}
+
+.MuiSelect-select{
+  display:flex;
+  height:20px;
+  padding:0;
+  border:0;
+  border-bottom: 2px solid yellow;
+  justify-content: center
+}
+
+.MuiOutlinedInput-notchedOutline{
+  height:37px;
+  border: 0;
+  display:flex;
+  border-radius:0;
+  border-bottom: 2px solid red;
+}
+
+.MuiOutlinedInput-notchedOutline:hover{
+  border-bottom: 2px solid green;
+}
+
+.MuiSelect-select img{
+  height: 15px;
+  margin-right: 1px;
+  margin-left: 4px;
+  align-self: center;
+}
+
+.MuiSvgIcon-root { display: none}
+
+
+Select{
+  width:80px;
+  box-shadow: none;
+  color:white;
+  border:0;
+}
+

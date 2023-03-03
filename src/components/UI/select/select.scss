@@ -1,0 +1,45 @@
+@import "src/colors";
+
+.select{
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  width: 70px;
+  align-self: center;
+  .label{
+    border-bottom: 2px solid transparent;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    &:hover{
+      border-bottom: 2px solid white;
+    }
+    img{
+      width: 20px;
+      align-self: center;
+      margin-right: 3px;
+    }
+  }
+  .options{
+    background-color: $header;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    .option{
+      padding: 2px;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      &:hover{
+        background-color: aliceblue;
+        color:black;
+      }
+      img{
+        width: 20px;
+        align-self: center;
+        margin-right: 2px;
+      }
+    }
+  }
+
+}
