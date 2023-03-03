@@ -16,6 +16,7 @@ import userImg from './img/user.jpg'
 
 import cross from './img/close.jpg'
 import './login.scss'
+import Cookies from "js-cookie";
 const SignUp = () => {
 
 
@@ -80,7 +81,7 @@ const SignUp = () => {
 
     return (
         <div className="Body">
-            <Header/>
+            <Header authorized={Cookies.get('access_token')  !== undefined}/>
             <div className="Main flex jc-center ai-center">
                 <div className="MyLoginForm">
                     <div className="AvatarForm">

@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
-import React, {useEffect, useState} from "react";
-import {Link, useParams} from "react-router-dom";
+import React, {useEffect} from "react";
+import {useParams} from "react-router-dom";
 
 
 import UserCard from "./UserCard/UserCard";
@@ -12,20 +12,21 @@ import * as action from '../../redux/action-creators'
 import {useTranslation} from "react-i18next";
 import Posts from "./Posts/Posts";
 import IUser from "../../interfaces/IUser";
+import Cookies from "js-cookie";
 function Profile() {
 
     const dispatch = useDispatch()
     const user:IUser = useSelector((state:State) => state.user)
-    const currentUser:IUser = useSelector((state:State) => state.currentUser)
+    const loading = useSelector((state:State) => state.loading)
+    useSelector((state:State) => state.currentUser);
     const {nickname} = useParams()
-    const [loading, setLoading] = useState(false)
     let profile
 
     const {t} = useTranslation()
 
     useEffect(() => {
         dispatch(action.getUser(nickname))
-    }, [])
+    }, [nickname, dispatch])
 
 
 
@@ -50,17 +51,9 @@ function Profile() {
         }
     }
 
-    let leave
-
-    if (localStorage.getItem('nickname') === user?.username) {
-        leave = (<Link className="header_nav-btn" to="/main"
-                       onClick={() => localStorage.removeItem('token')}>{t('leave')}</Link>)
-    }
     return (
         <div className="Body">
-            <Header>
-                {leave}
-            </Header>
+            <Header authorized={Cookies.get('access_token')  !== undefined}/>
             {profile}
             <Footer/>
         </div>

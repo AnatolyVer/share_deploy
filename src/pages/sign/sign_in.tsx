@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {useTranslation} from "react-i18next";
 
@@ -12,6 +12,7 @@ import ILogin from "../../interfaces/ILogin";
 
 import './login.scss'
 import { useNavigate } from 'react-router-dom';
+import Cookies from "js-cookie";
 const SignIn = () => {
 
     const {t} = useTranslation()
@@ -31,7 +32,7 @@ const SignIn = () => {
 
     return (
         <div className="Body" onClick={() => changeError(true)}>
-            <Header/>
+            <Header authorized={Cookies.get('access_token') !== undefined}/>
             <div className="Main column flex jc-center ai-center">
 
                 <div className="MyLoginForm">
